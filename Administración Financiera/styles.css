@@ -76,7 +76,7 @@ header { margin-bottom: 3rem; }
 
 input {
     padding: 0.8rem;
-    border: 1px border #cbd5e1;
+    border: 1px solid #cbd5e1;
     border-radius: 6px;
 }
 
@@ -87,6 +87,12 @@ input {
     padding: 1rem;
     border-radius: 6px;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-calc:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 /* Flashcards */
@@ -102,6 +108,11 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
+}
+
+.flashcard:hover {
+    transform: scale(1.02);
 }
 
 /* Drive Buttons */
