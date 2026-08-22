@@ -1,4 +1,3 @@
-JavaScript
 const modules = {
     fundamentos: {
         title: "Fundamentos Financieros",
@@ -49,6 +48,16 @@ const modules = {
                 <a href="TU_LINK_EXCEL" class="drive-link" target="_blank">📊 Plantilla de Ratios (Excel)</a>
             </div>
         `
+    },
+    presupuestos: {
+        title: "Presupuestos",
+        description: "Elaboración y análisis de presupuestos financieros.",
+        content: `
+            <div class="card">
+                <h3>Presupuestos</h3>
+                <p>Contenido en desarrollo. Por favor, completa los enlaces de recursos.</p>
+            </div>
+        `
     }
 };
 
@@ -56,6 +65,12 @@ const modules = {
 document.querySelectorAll('.nav-links li').forEach(li => {
     li.addEventListener('click', (e) => {
         const target = e.target.getAttribute('data-target');
+        
+        // Validar que el módulo existe
+        if (!modules[target]) {
+            console.error(`Módulo '${target}' no encontrado`);
+            return;
+        }
         
         // Actualizar UI activa
         document.querySelector('.nav-links li.active').classList.remove('active');
